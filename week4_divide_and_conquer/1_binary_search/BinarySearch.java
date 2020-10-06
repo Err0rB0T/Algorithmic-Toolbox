@@ -3,17 +3,17 @@ import java.util.*;
 
 public class diagonal  {
 
-    static int binarySearch(int[] a, int x) {
+    static int binarySearch(int[] a, int y) {
         int left = 0, right = a.length-1;
         int mid;
         while(left<=right) {
             mid = left + ((right - left) / 2);
-            if (a[mid] == x) {
+            if (a[mid] == y) {
                 return mid;
             }
-            if (a[mid] > x) {
+            if (a[mid] > y) {
                 right = mid - 1;
-            } else if (a[mid] < x) {
+            } else if (a[mid] < y) {
                 left = mid + 1;
             }
         }
@@ -22,9 +22,9 @@ public class diagonal  {
         return -1;
     }
 
-    static int linearSearch(int[] a, int x) {
+    static int linearSearch(int[] a, int y) {
         for (int i = 0; i < a.length; i++) {
-            if (a[i] == x) return i;
+            if (a[i] == y) return i;
         }
         return -1;
     }
